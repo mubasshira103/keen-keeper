@@ -15,7 +15,10 @@ const TimeLine = () => {
   return (
     <div className="px-5 py-4 ...">
       {
-        filteredData.length == 0 ? <div> no data</div> :
+        filteredData.length == 0 ? <div className="text-center py-10 text-gray-500">
+      <h2 className="text-xl font-semibold">No interactions found </h2>
+      <p className="text-sm mt-2">Try adding a call, message, or video</p>
+    </div>:
 
         <div>
           <div className='mb-4 sm:mb-6'>
