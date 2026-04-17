@@ -2,6 +2,7 @@ import React, { use, useContext } from 'react';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { Link, useParams } from 'react-router';
 import { InteractionContext } from '../Context/InteractionProvider';
+import { toast } from 'react-toastify';
 const allFriendsPromise = fetch("/allFriends.json").then((res) => res.json());
 
 const FriendDetails = () => {
@@ -14,6 +15,7 @@ const FriendDetails = () => {
   );
   const tags = clickedFriend.tags;
   const handleInteraction = (type) => {
+    toast.success(`${type} with${clickedFriend.name}`)
   const newInteraction = {
     id: Date.now(),
     friendName: clickedFriend.name,

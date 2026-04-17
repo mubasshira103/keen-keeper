@@ -12,6 +12,7 @@ import Stats from './Pages/Stats'
 import ErrorPage from './Pages/ErrorPage.jsx';
 import FriendDetails from './Component/FriendDetails.jsx';
 import InteractionProvider from './Context/InteractionProvider.jsx';
+import { ToastContainer } from 'react-toastify';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <InteractionProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
     </InteractionProvider>
 
   </StrictMode>,
