@@ -33,7 +33,6 @@ const FriendDetails = () => {
   return (
     <div className="">
       <div className="max-w-5xl mx-auto p-6  ">
-        <Link to={'/'} className="btn bg-[#244D3F] text-white mb-4"> <MdArrowBackIosNew></MdArrowBackIosNew>  Back</Link>
 
         <div className="flex flex-col md:flex-row gap-6">
 
@@ -219,7 +218,11 @@ const FriendDetails = () => {
           </div>
         </div>
       </div>
+      <div className='text-center m-5'>
+        <Link to={'/'} className="btn bg-[#244D3F] text-white mb-4"> <MdArrowBackIosNew></MdArrowBackIosNew>  Back</Link>
+      </div>
     </div>
+
   );
 };
 
