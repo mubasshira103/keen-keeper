@@ -16,13 +16,13 @@ const Navbar = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink  to={'/'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-gray-500'  }><IoHomeOutline></IoHomeOutline> Home</NavLink>
+              <NavLink  to={'/'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-black'  }><IoHomeOutline></IoHomeOutline> Home</NavLink>
             </li>
             <li>
-              <NavLink to={'/timeline'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-gray-500'  }><RiTimeLine></RiTimeLine> Timeline</NavLink>
+              <NavLink to={'/timeline'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-black'  }><RiTimeLine></RiTimeLine> Timeline</NavLink>
             </li>
               <li>
-              <NavLink to={'/stats'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-gray-500'  }><ImStatsBars></ImStatsBars> Stats</NavLink>
+              <NavLink to={'/stats'} className={ ({isActive}) => isActive ? ' bg-[#244D3F] text-white' : 'text-black'  }><ImStatsBars></ImStatsBars> Stats</NavLink>
               </li>
           </ul>
         </div>
