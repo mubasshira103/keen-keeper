@@ -1,16 +1,103 @@
-# React + Vite
+# 👥 KeenKeeper — Keep Your Friendships Alive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a responsive friendship management web application built with React. It helps users track interactions with friends (calls, texts, video chats) and visualize relationship activity through timelines and analytics.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Project Description
 
-## Expanding the ESLint configuration
+KeenKeeper helps users:
+- Track friends and their contact status
+- Log interactions (Call / Text / Video)
+- Monitor relationship health (On Track / Need Attention / Overdue)
+- View interaction history in a timeline
+- Analyze friendship activity using charts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- React.js
+- React Router DOM
+- Tailwind CSS
+- Daisyui
+- Context API
+- React Toastify
+- Recharts
+- JSON (mock API data)
+
+---
+
+## ✨ Key Features
+
+### 🧑 Friends Management
+- Display friends from JSON data
+- Responsive 4-column grid layout
+- Status-based UI (on-track, almost due, overdue)
+- Clickable friend cards leading to detailed page
+
+---
+
+### 👤 Friend Details Page
+- Full friend profile view
+- Relationship stats (days since contact, goal, next due date)
+- Quick actions: Call, Text, Video
+- Logs interaction to timeline automatically
+- Shows toast notifications on each action
+
+---
+
+### ⚡ Timeline System
+- Tracks all interactions (Call / Text / Video)
+- Displays date, icon, and title
+- Filter timeline by interaction type
+- Supports sorting (optional enhancement)
+
+---
+
+### 📊 Analytics Stats Page
+- Total Friends count
+- On Track / Need Attention breakdown
+- Monthly interaction tracking
+- Pie chart visualization using Recharts
+
+---
+
+### 📱 Responsive Design
+- Fully responsive for:
+  - Mobile 📱
+  - Tablet 📟
+  - Desktop 💻
+
+---
+
+### 🔔 toast alerts
+- Toast alerts for:
+  - Call
+  - Text
+  - Video interactions
+
+---
+
+### ❗ Additional Features
+- Loading spinner while fetching data
+- 404 Not Found page
+- Refresh-safe routing (no reload errors)
+
+---
+
+
+# Install dependencies
+npm install
+
+# Run project
+npm run dev
+🚀 Deployment
+
+Deploy using:
+
+Netlify
+
