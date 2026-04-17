@@ -35,7 +35,7 @@ const TimeLine = () => {
         </div>
       }
     {filteredData.map((item,) => (
-      <div className='flex justify-between items-center bg-gray-100 py-4 px-8 my-3 rounded-2xl'>
+      <div className=' flex flex-col md:flex-row justify-between items-center bg-gray-100 py-4 px-8 my-3 rounded-2xl'>
         <div key={item.id} className="flex gap-3 items-center mb-4">
         <div>
           <img src={` ${item.type =='call'  ? callIcon : item.type =='text' ? textIcon : videoIcon }`} alt="icon " />

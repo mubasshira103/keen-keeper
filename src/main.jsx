@@ -10,9 +10,9 @@ import Home from './Pages/Home.jsx'
 import TimeLine from './Pages/TimeLine.jsx'
 import Stats from './Pages/Stats'
 import ErrorPage from './Pages/ErrorPage.jsx';
-import FriendDetails from './Component/FriendDetails.jsx';
 import InteractionProvider from './Context/InteractionProvider.jsx';
 import { ToastContainer } from 'react-toastify';
+import FriendDetails from './Component/FriendDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,12 +32,8 @@ const router = createBrowserRouter([
       } ,
       {
       path : '/friendsDetails/:id',
-      element :(
-        <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-          <FriendDetails></FriendDetails>
-        </Suspense>
-      )
-      } ,
+      Component : FriendDetails
+      } 
 
       ],
     errorElement:<ErrorPage></ErrorPage>

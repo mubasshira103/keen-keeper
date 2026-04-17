@@ -45,3 +45,4 @@ const Friends = ({friend}) => {
 };
 
 export default Friends;
+

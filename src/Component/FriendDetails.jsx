@@ -1,18 +1,41 @@
-import React, { use, useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MdArrowBackIosNew } from 'react-icons/md';
 import { Link, useParams } from 'react-router';
 import { InteractionContext } from '../Context/InteractionProvider';
 import { toast } from 'react-toastify';
-const allFriendsPromise = fetch("/allFriends.json").then((res) => res.json());
+
 
 const FriendDetails = () => {
   const {addInteraction}=useContext(InteractionContext)
-  const AllFriendsArray = use(allFriendsPromise);
-  const params = useParams();
-  const { id } = params;
-  const clickedFriend = AllFriendsArray.find(
-    (clickedF) => clickedF.id == parseInt(id),
-  );
+  const { id } = useParams();
+  const [friends, setFriends] = useState(null);
+  useEffect(() => {
+      fetch("/allFriends.json")
+        .then((res) => res.json())
+        .then((data) => setFriends(data));
+    }, []);
+
+    //loading spinner
+    if (!friends) {
+      return (
+        <div className="text-center py-20">
+          <span className="loading loading-spinner loading-xl"></span>
+        </div>
+      );
+    }
+
+    const clickedFriend = friends.find(
+      (f) => f.id == parseInt(id)
+    );
+
+    // ⚠️ যদি friend না পাওয়া যায়
+    if (!clickedFriend) {
+      return (
+        <div className="text-center py-20">
+          <h2 className="text-xl font-semibold">Friend not found 😢</h2>
+        </div>
+      );
+    }
   const tags = clickedFriend.tags;
   const handleInteraction = (type) => {
     toast.success(`${type} with${clickedFriend.name}`)
