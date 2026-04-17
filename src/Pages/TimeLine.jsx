@@ -13,7 +13,7 @@ const TimeLine = () => {
 
   console.log(interactions)
   return (
-    <div className="px-5 py-4 ...">
+    <div className="px-5 py-4 max-w-11/12 mx-auto">
       {
         filteredData.length == 0 ? <div className="text-center py-10 text-gray-500">
       <h2 className="text-xl font-semibold">No interactions found </h2>
